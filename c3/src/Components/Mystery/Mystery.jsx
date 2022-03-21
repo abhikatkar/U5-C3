@@ -1,0 +1,15 @@
+
+
+export const Mystery = () => {
+    return(
+        <div className="mysteryContainer">
+        <h2 style={{ textAlign: "center" }}>Mistery</h2>
+        <div className="sort">
+        <button>Sort by Title Asc</button>
+        <button>Sort by Title Desc</button>
+        <button>Sort by Price Asc</button>
+        <button>Sort by Price Desc</button>
+    </div>
+      </div>
+    )
+}
