@@ -12,6 +12,7 @@ export const Home = () => {
   function fetchAllBooks(){
     axios.get("http://localhost:8080/books").then((res) =>setBooks([...res.data]))
     
+
   }
  
   function handleSort(nameBy,order){

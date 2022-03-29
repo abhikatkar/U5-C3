@@ -10,17 +10,25 @@ export const Section = () => {
   const { section } = useParams();
   const [sectionBooks, setSectionBooks] = useState([]);
 
+  // useEffect(
+  //   () =>{
+  //     axios
+  //       .get("http://localhost:8080/books")
+  //       .then((res) =>
+  //         setSectionBooks([...res.data.filter((el) => el.section === section)])
+  //       )},
+  //   [section]
+  // );
+
   useEffect(
     () =>{
       axios
-        .get("http://localhost:8080/books")
+        .get(`http://localhost:2345/books?section=${section}`)
         .then((res) =>
-          setSectionBooks([...res.data.filter((el) => el.section === section)])
+          setSectionBooks([...res.data])
         )},
     [section]
   );
-
-  
 
   function handleSort(nameBy, order) {
     console.log(nameBy, order);

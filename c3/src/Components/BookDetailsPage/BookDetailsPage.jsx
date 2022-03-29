@@ -20,8 +20,8 @@ export const BookDetailsPage = () => {
 }); 
 
   useEffect(() => {  
-      axios.get(`http://localhost:8080/books/${id}`).then((res) => setBook(res.data)); 
-      
+      // axios.get(`http://localhost:8080/books/${id}`).then((res) => setBook(res.data)); 
+      axios.get(`http://localhost:2345/books/${id}`).then((res) => setBook(res.data)); 
 
   }, [id]); 
 
